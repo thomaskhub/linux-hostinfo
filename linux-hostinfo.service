@@ -1,0 +1,11 @@
+[Unit]
+Description=Linux Hostinfo Service
+After=network.target
+
+[Service]
+ExecStart=/usr/local/bin/linux-hostinfo.sh
+Type=oneshot
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
