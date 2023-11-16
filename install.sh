@@ -5,13 +5,13 @@
 INSTALL_PATH=/usr/local/bin/linux-hostinfo.sh
 CFG_PATH=/etc/linux-hostinfo
 GIT_RAW_URL_SYSTEMD=https://raw.githubusercontent.com/thomaskhub/linux-hostinfo/main/linux-hostinfo.service
+GIT_RAW_URL_SCRIPT=https://raw.githubusercontent.com/thomaskhub/linux-hostinfo/main/linux-hostinfo.sh
 
 #
 # Prepare installation 
 #
 mkdir -p $CFG_PATH
-
-cp linux-hostinfo.sh $INSTALL_PATH
+curl -o $INSTALL_PATH $GIT_RAW_URL_SCRIPT
 chmod +x $INSTALL_PATH
 
 # Downlaod linux-hostinfo.service from raw github url with curl into the /tmo directory 
